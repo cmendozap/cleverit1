@@ -1,0 +1,83 @@
+td, th {
+    border: 1px solid rgb(100, 100, 100);
+    padding: 10px 10px;
+}
+
+td {
+    text-align: center;
+}
+button.submit {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: .5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+	font-family: sans-serif;
+	font-size: .7rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+label {
+	font-family: sans-serif;
+	font-size: .7rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(100, 100, 100);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .7rem;
+}
+span.path{
+	font-family: sans-serif;
+    font-size: 1rem;
+	text-decoration: none;
+}
+a.btn{
+	letter-spacing: 1px;
+	font-family: sans-serif;
+    font-size: .7rem;
+	color: white;
+	padding: .5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a.btn-delete {
+  background-color: red;
+}
+a.btn-change {
+  background-color: blue;
+}
+a.btn-add {
+  background-color: green;
+  display: inline-block; 
+}
+
+a.btn-menu {
+  background-color: orangered;
+  display: inline-block; 
+}
+span.input-error {
+	display: inline-block;
+	letter-spacing: 1px;
+	font-family: sans-serif;
+    font-size: 1rem;
+	color: red;
+}
+input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  	font-family: sans-serif;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	width: 350px;
+}

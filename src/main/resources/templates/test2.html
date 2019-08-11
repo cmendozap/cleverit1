@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Cleverit - CMendoza</title>
+<link rel="stylesheet" type="text/css" href="/css.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="testscript.js"></script>
+<script>
+$(document).ready(function(){
+	showOptions();
+});
+
+function showOptions(){
+	document.getElementById("options").style.display = "block";
+	document.getElementById("processing").style.display = "none";
+}
+function showProcessing(){
+	document.getElementById("options").style.display = "none";
+	document.getElementById("processing").style.display = "block";
+}
+function importLicenses(){
+	showProcessing();
+
+	this.document.location.href = "/process";
+}
+</script>
+
+</head>
+<body>
+<div>
+	<span class="path">
+		<a class= "path" href="/">Inicio</a> &gt; Ejercicio # 2
+	</span>
+</div>
+<h1>Bienvenido al Spring Boot Test de Cleverit</h1>
+<h2>Carlos Mendoza Perrone - Postulante (+56 9 6610 4221)</h2>
+
+<div>
+	<div id="options">
+	   	<h1>Base de Datos, MySQL, Hibernate</h1>
+		<h4>CREATE TABLE `plates` <br>
+			(`id` int(11) NOT NULL, <br>
+			`id_user` varchar(45) NOT NULL, <br>
+			`license_plate` varchar(45) NOT NULL, <br>
+			`vehicle_alias` varchar(45) NOT NULL, <br>
+			PRIMARY KEY (`id`))</h4>
+		<h3>Este proceso (1) eliminan&aacute; los registros actuales y<br>
+		(2) evitar&aacute; el registro de registros con datos nulos.</h3>
+		<div>
+			<a href="#" title="Importar Licencias" class="btn btn-add" onclick="importLicenses();return false;">Importar Licencias</a>
+         	<hr style="border:white">
+    	</div>
+
+	</div>
+	<div id="processing">
+		<h1>Procesando...</h1>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

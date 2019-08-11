@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Cleverit - CMendoza</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css.css}">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script th:src="testscript.js"></script>
+
+<script th:inline="javascript">
+ function clearElementError(id){
+	 document.getElementById(id + "Error").textContent = ""
+ }
+</script>
+</head>
+<body>
+
+<div>
+<span class="path">
+<a class= "path" href="/">Inicio</a> &gt; <a class= "path" href="/test1">Ejercicio # 1</a>
+</span>
+</div>
+<h1>Bienvenido al Spring Boot Test de Cleverit</h1>
+<h2>Carlos Mendoza Perrone - Postulante (+56 9 6610 4221)</h2>
+
+<div>
+    <h1>Usuario</h1>
+    <div class="container">
+        <form action="#" th:action="@{/save}" th:object="${user}" method="post">
+            <input type="hidden" th:field="*{id}" />
+            
+            <div>
+				<label for="name">Nombre</label>
+				<div>
+					<input type="text" th:field="*{name}" name="name" id="name" th:oninput="clearElementError(id)" placeholder="Nombre"/>
+					<span id="nameError" class="input-error" th:errors="*{name}">Nombre es requerido</span>
+				</div>
+            </div>
+
+            <div>
+				<label for="lastName">Apellido</label>
+				<div>
+					<input type="text" th:field="*{lastName}" name="lastName" id="lastName" th:oninput="clearElementError(id)" placeholder="Apellido"/>
+					<span id="lastNameError" class="input-error" th:errors="*{lastName}">Apellido es requerido</span>
+				</div>
+            </div>
+
+            <div>
+				<label for="email">Email</label>
+				<div>
+					<input type="text" th:field="*{email}" name="email" id="email" th:oninput="clearElementError(id)" placeholder="Email"/>
+					<span id="emailError" class="input-error" th:errors="*{email}">Email v&aacute;lido es requerido</span>
+				</div>
+            </div>
+
+            <div>
+				<label for="password" >Clave</label>
+				<div>
+               		<input type="text" th:field="*{password}" name="password" class="form-control" id="password" th:oninput="clearElementError(id)" placeholder="Clave"/>
+					<span id="passwordError" class="input-error" th:errors="*{password}">Clave es requerida</span>
+				</div>
+			</div>
+
+			<hr style="border:white">
+			
+            <div>
+                <a th:href="@{/test1}" class="btn btn-delete" role="button"><span aria-hidden="true"></span>Cancelar</a>
+				&nbsp;
+                <button type="submit" class="submit">Guardar</button>
+            </div>
+        </form>
+	</div>
+</div>
+</body>
+</html>

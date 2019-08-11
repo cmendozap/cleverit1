@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Cleverit - CMendoza</title>
+
+<link rel="stylesheet" type="text/css" th:href="@{/css.css}">
+</head>
+<body>
+
+<div>
+<span class="path">
+<a class= "path" href="/">Inicio</a> &gt; Ejercicio # 1
+</span>
+</div>
+<h1>Bienvenido al Spring Boot Test de Cleverit</h1>
+<h2>Carlos Mendoza Perrone - Postulante (+56 9 6610 4221)</h2>
+
+<div>
+
+    <h1>Usuarios</h1>
+    <a th:href="@{/user}" title="A&ntilde;adir usuario" class="btn btn-add">A&ntilde;adir Usuario</a>
+	<hr style="border:white">
+    <table class="table table-striped">
+        <tr>
+            <td><b>Nombre</b></td>
+            <td><b>Apellido</b></td>
+			<td><b>Email</b></td>
+			<td><b>Acciones</b></td>
+        </tr>
+        <tr th:each="u : ${users}">
+            <td th:text="${u.getName()}">Nombre</td>
+            <td th:text="${u.getLastName()}">Apellido</td>
+            <td th:text="${u.getEmail()}">otorus@gmail.com</td>
+            <td>
+                <a href="#" class="btn btn-change" title="Cambiar usuario" th:href="@{/user/(id=${u.getId()})}">
+                    <i class="glyphicon glyphicon-edit"></i> Cambiar
+                </a>
+                &nbsp;
+                <a href="#" class="btn btn-delete" title="Borrar usuario" th:href="@{/delete/(id=${u.getId()})}">
+                    <i class="glyphicon glyphicon-trash"></i> Borrar
+                </a>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+</body>
+</html>

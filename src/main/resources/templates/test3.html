@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Cleverit - CMendoza</title>
+<link rel="stylesheet" type="text/css" href="/css.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="testscript.js"></script>
+<script src="calls.js"></script>
+<script>
+$(document).ready(function(){
+	renew();
+});
+
+
+</script>
+
+</head>
+<body>
+<div>
+	<span class="path">
+		<a class= "path" href="/">Inicio</a> &gt; Ejercicio # 3
+	</span>
+</div>
+<h1>Bienvenido al Spring Boot Test de Cleverit</h1>
+<h2>Carlos Mendoza Perrone - Postulante (+56 9 6610 4221)</h2>
+
+<div>
+	<div id="user-list">
+	   	<h1>Usuarios</h1>
+    	<div>
+			<a href="#" title="A&ntilde;adir usuario" class="btn btn-add" onclick="addUser();return false;">A&ntilde;adir Usuario</a>
+         	<hr style="border:white">
+    	</div>
+    	<div id="full-table">
+			Cargando...
+		</div>
+	</div>
+	<div id="user-form">
+		<h1>Usuario</h1>
+		<form onsubmit="return false;">
+			<input type="hidden" id="id"/>
+			<div>
+				<label for="name">Nombre</label>
+				<div>
+					<input type="text" id="name" placeholder="Nombre" required oninput="clean(document.getElementById(id + 'Error'))"/>
+					<span class="input-error" id="nameError" style="display:none;">Nombre es requerido</span>
+				</div>
+
+			</div>
+
+			<div>
+				<label for="lastName">Apellido</label>
+				<div>
+					<input type="text" id="lastName" placeholder="Apellido" required oninput="clean(document.getElementById(id + 'Error'))"/>
+					<span class="input-error" id="lastNameError" style="display:none;">Apellido es requerido</span>
+				</div>
+			</div>
+
+			<div>
+				<label for="email">Email</label>
+				<div>
+					<input type="text" id="email" placeholder="Email" required oninput="clean(document.getElementById(id + 'Error'))"/>
+					<span class="input-error" id="emailError" style="display:none;">Email v&aacute;lido es requerido</span>
+				</div>
+			</div>
+
+			<div>
+				<label for="password">Clave</label>
+				<div>
+					<input type="text" id="password" placeholder="Clave" required oninput="clean(document.getElementById(id + 'Error'))"/>
+					<span class="input-error" id="passwordError" style="display:none;">Clave es requerida</span>
+				</div>
+			</div>
+
+			<div>
+				<a href="#" onclick="cancelForm();return false;" class="btn btn-delete" role="button"><span aria-hidden="true"></span>Cancelar</a>
+				&nbsp;
+				<button type="submit" onclick="inputValidation();return false;" class="submit">Guardar</button>
+			</div>
+		</form>
+	</div>
+
+</div>
+
+
+</body>
+</html>

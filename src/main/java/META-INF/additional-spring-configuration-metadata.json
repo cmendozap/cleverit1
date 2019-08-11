@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "hibernate.mysql.driverclass",
+    "type": "java.lang.String",
+    "description": "A description for 'hibernate.mysql.driverclass'"
+  },
+  {
+    "name": "hibernate.mysql.url.dmv",
+    "type": "java.lang.String",
+    "description": "A description for 'hibernate.mysql.url.dmv'"
+  },
+  {
+    "name": "hibernate.mysql.username",
+    "type": "java.lang.String",
+    "description": "A description for 'hibernate.mysql.username'"
+  },
+  {
+    "name": "hibernate.mysql.password",
+    "type": "java.lang.String",
+    "description": "A description for 'hibernate.mysql.password'"
+  }
+]}
